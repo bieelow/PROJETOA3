@@ -1,0 +1,15 @@
+com\faculana\pm\PageController.class
+com\faculana\pm\service\UserService.class
+com\faculana\pm\model\ProjectStatus.class
+com\faculana\pm\controller\ProjectController.class
+com\faculana\pm\service\ProjectService.class
+com\faculana\pm\controller\UserController.class
+com\faculana\pm\model\Role.class
+com\faculana\pm\Application.class
+com\faculana\pm\model\Team.class
+com\faculana\pm\model\Project.class
+com\faculana\pm\model\User.class
+com\faculana\pm\repository\ProjectRepository.class
+com\faculana\pm\controller\ApiController.class
+com\faculana\pm\controller\TeamsController.class
+com\faculana\pm\service\TeamService.class

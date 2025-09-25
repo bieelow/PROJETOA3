@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cadastro de Carros</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; padding-top: 30px; }
+        form { margin-top: 20px; }
+        label, input, select { display: block; margin: 8px 0; }
+        .button { background-color: #1abc9c; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        .button:hover { background-color: #16a085; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Carro</h1>
+        <form th:action="@{/api/carros}" th:object="${carro}" method="post">
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" th:field="*{modelo}" placeholder="Digite o modelo do carro" required />
+
+            <label for="anoFabricacao">Ano de Fabricação:</label>
+            <input type="number" id="anoFabricacao" th:field="*{anoFabricacao}" placeholder="Digite o ano de fabricação" required />
+
+            <label for="anoModelo">Ano do Modelo:</label>
+            <input type="number" id="anoModelo" th:field="*{anoModelo}" placeholder="Digite o ano do modelo" required />
+
+            <label for="chassi">Chassi:</label>
+            <input type="text" id="chassi" th:field="*{chassi}" placeholder="Digite o número do chassi" required />
+
+            <label for="cliente">Cliente:</label>
+            <select id="cliente" th:field="*{cliente.id}" required>
+                <option th:each="cliente : ${clientes}" th:value="${cliente.id}" th:text="${cliente.nome} + ' ' + ${cliente.sobrenome}"></option>
+            </select>
+
+            <button type="submit" class="button">Cadastrar Carro</button>
+        </form>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cadastro de Carros</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; padding-top: 30px; }
+        form { margin-top: 20px; }
+        label, input, select { display: block; margin: 10px 0; }
+        .button { background-color: #1abc9c; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+        .button:hover { background-color: #16a085; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Carro</h1>
+        <form th:action="@{/carros}" th:object="${carro}" method="post">
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" th:field="*{modelo}" placeholder="Digite o modelo do carro" required />
+
+            <label for="anoFabricacao">Ano de Fabricação:</label>
+            <input type="number" id="anoFabricacao" th:field="*{anoFabricacao}" placeholder="Digite o ano de fabricação" required />
+
+            <label for="anoModelo">Ano do Modelo:</label>
+            <input type="number" id="anoModelo" th:field="*{anoModelo}" placeholder="Digite o ano do modelo" required />
+
+            <label for="chassi">Chassi:</label>
+            <input type="text" id="chassi" th:field="*{chassi}" placeholder="Digite o número do chassi" required />
+
+            <label for="cliente">Cliente:</label>
+            <select id="cliente" th:field="*{cliente.id}" required>
+                <option th:each="cliente : ${clientes}" th:value="${cliente.id}" th:text="${cliente.nome}"></option>
+            </select>
+
+            <button type="submit" class="button">Cadastrar Carro</button>
+        </form>
+    </div>
+</body>
+</html>

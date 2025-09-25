@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Equipes</title>
+ </head>
+<body>
+<h1>Equipes</h1>
+<table border="1">
+    <tr><th>ID</th><th>Nome</th><th>Descrição</th><th>Membros</th></tr>
+    <tr th:each="e : ${equipes}">
+        <td th:text="${e.id}"></td>
+        <td th:text="${e.nome}"></td>
+        <td th:text="${e.descricao}"></td>
+        <td>
+            <span th:each="m : ${e.membros}" th:text="${m.nome + ' (' + m.cargo + ') '}"></span>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

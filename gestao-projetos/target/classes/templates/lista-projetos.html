@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Projetos</title>
+ </head>
+<body>
+<h1>Projetos</h1>
+<table border="1">
+    <tr><th>ID</th><th>Nome</th><th>Descrição</th><th>Gerente</th></tr>
+    <tr th:each="p : ${projetos}">
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.nome}"></td>
+        <td th:text="${p.descricao}"></td>
+        <td th:text="${p.gerenteResponsavel != null ? p.gerenteResponsavel.nome : ''}"></td>
+    </tr>
+</table>
+</body>
+</html>

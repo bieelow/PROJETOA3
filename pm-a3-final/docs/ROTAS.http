@@ -1,0 +1,26 @@
+### UI
+GET http://localhost:8080/
+GET http://localhost:8080/projects
+
+### REST Projects
+GET http://localhost:8080/api/projects
+POST http://localhost:8080/api/projects
+Content-Type: application/json
+
+{ "titulo": "Projeto X", "status": "PLANEJADO" }
+
+### REST Tasks
+GET http://localhost:8080/api/tasks
+POST http://localhost:8080/api/tasks
+Content-Type: application/json
+
+{ "titulo": "Tarefa X", "prioridade": 2, "projeto": { "id": 1 } }
+
+GET http://localhost:8080/api/tasks/sort
+GET http://localhost:8080/api/tasks/search?q=Tarefa%201
+
+### DEMO Estruturas
+POST http://localhost:8080/api/demo/stack/push?v=alpha
+POST http://localhost:8080/api/demo/stack/pop
+POST http://localhost:8080/api/demo/queue/enqueue?v=beta
+POST http://localhost:8080/api/demo/queue/dequeue

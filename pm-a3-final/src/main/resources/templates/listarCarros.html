@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Listagem de Carros</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 90%; margin: auto; padding-top: 30px; }
+        table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+        th, td { padding: 8px 12px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Carros Cadastrados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Ano Fabricação</th>
+                    <th>Ano Modelo</th>
+                    <th>Chassi</th>
+                    <th>Cliente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="carro : ${carros}">
+                    <td th:text="${carro.modelo}"></td>
+                    <td th:text="${carro.anoFabricacao}"></td>
+                    <td th:text="${carro.anoModelo}"></td>
+                    <td th:text="${carro.chassi}"></td>
+                    <td th:text="${carro.cliente != null ? carro.cliente.nome + ' ' + carro.cliente.sobrenome : '—'}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Listagem de Carros</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 90%; margin: auto; padding-top: 30px; }
+        table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+        th, td { padding: 8px 12px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Carros Cadastrados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Ano Fabricação</th>
+                    <th>Ano Modelo</th>
+                    <th>Chassi</th>
+                    <th>Cliente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="carro : ${carros}">
+                    <td th:text="${carro.modelo}"></td>
+                    <td th:text="${carro.anoFabricacao}"></td>
+                    <td th:text="${carro.anoModelo}"></td>
+                    <td th:text="${carro.chassi}"></td>
+                    <td th:text="${carro.cliente != null ? carro.cliente.nome : ' - '}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

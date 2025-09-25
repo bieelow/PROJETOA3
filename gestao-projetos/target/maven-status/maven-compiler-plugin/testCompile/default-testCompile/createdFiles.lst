@@ -1,0 +1,7 @@
+com\gestaoprojetos\security\SecurityAdminAccessTest.class
+com\gestaoprojetos\GestaoProjetosApplicationTests.class
+com\gestaoprojetos\security\LoginAuthIntegrationTest.class
+com\gestaoprojetos\security\SecurityAndReportTests.class
+com\gestaoprojetos\controllers\TesteControllerTest.class
+com\gestaoprojetos\repository\CrudUsuarioProjetoEquipeTests.class
+com\gestaoprojetos\security\SecurityPermissionsAndReportTests.class

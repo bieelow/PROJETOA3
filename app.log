@@ -1,0 +1,37 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.6)
+
+2025-09-25T14:35:59.145-03:00  INFO 28468 --- [           main] c.g.GestaoProjetosApplication            : Starting GestaoProjetosApplication v0.0.1-SNAPSHOT using Java 21.0.8 with PID 28468 (C:\Users\Gabriel\OneDrive\Área de Trabalho\FACULDADE GABRIEL\Segundo semestre\PROGRAMAÇÃO DE SOLUÇÕES COMPUTACIONAIS\ProjetoA3\GestaoDeProjetos-main\gestao-projetos\target\gestao-projetos-0.0.1-SNAPSHOT.jar started by Gabriel in C:\Users\Gabriel\OneDrive\Área de Trabalho\FACULDADE GABRIEL\Segundo semestre\PROGRAMAÇÃO DE SOLUÇÕES COMPUTACIONAIS\ProjetoA3\GestaoDeProjetos-main)
+2025-09-25T14:35:59.145-03:00  INFO 28468 --- [           main] c.g.GestaoProjetosApplication            : The following 1 profile is active: "dev"
+2025-09-25T14:36:00.320-03:00  INFO 28468 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-25T14:36:00.416-03:00  INFO 28468 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
+2025-09-25T14:36:01.475-03:00  INFO 28468 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-09-25T14:36:01.492-03:00  INFO 28468 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-25T14:36:01.492-03:00  INFO 28468 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-09-25T14:36:01.597-03:00  INFO 28468 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-25T14:36:01.597-03:00  INFO 28468 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2353 ms
+2025-09-25T14:36:01.640-03:00  INFO 28468 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-25T14:36:01.937-03:00  INFO 28468 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:46d3c789-01ba-4743-bfd1-a8b9eb972a21 user=SA
+2025-09-25T14:36:01.937-03:00  INFO 28468 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-25T14:36:01.953-03:00  INFO 28468 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:46d3c789-01ba-4743-bfd1-a8b9eb972a21'
+2025-09-25T14:36:02.166-03:00  INFO 28468 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-25T14:36:02.277-03:00  INFO 28468 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-09-25T14:36:02.280-03:00  INFO 28468 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-09-25T14:36:02.792-03:00  INFO 28468 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-25T14:36:02.888-03:00  WARN 28468 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-25T14:36:04.068-03:00  INFO 28468 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-25T14:36:04.132-03:00  INFO 28468 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-25T14:36:04.536-03:00  WARN 28468 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-25T14:36:04.738-03:00  INFO 28468 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6732726, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@474821de, org.springframework.security.web.context.SecurityContextHolderFilter@d1d8e1a, org.springframework.security.web.header.HeaderWriterFilter@16a9eb2e, org.springframework.security.web.csrf.CsrfFilter@806996, org.springframework.security.web.authentication.logout.LogoutFilter@3f1a4795, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4c86da0c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@17461db, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3d64c581, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b48e183, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@30c1da48, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ec5ea63, org.springframework.security.web.access.ExceptionTranslationFilter@3fba233d, org.springframework.security.web.access.intercept.AuthorizationFilter@201c3cda]
+2025-09-25T14:36:05.353-03:00  INFO 28468 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-09-25T14:36:05.390-03:00  INFO 28468 --- [           main] c.g.GestaoProjetosApplication            : Started GestaoProjetosApplication in 7.01 seconds (process running for 7.954)
+2025-09-25T14:36:28.593-03:00  INFO 28468 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-25T14:36:28.594-03:00  INFO 28468 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-25T14:36:28.597-03:00  INFO 28468 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+^C

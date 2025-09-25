@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Listagem de Clientes</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 90%; margin: auto; padding-top: 30px; }
+        table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+        th, td { padding: 8px 12px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Clientes Cadastrados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>E-mail</th>
+                    <th>Usuário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="cliente : ${clientes}">
+                    <td th:text="${cliente.nome}"></td>
+                    <td th:text="${cliente.sobrenome}"></td>
+                    <td th:text="${cliente.email}"></td>
+                    <td th:text="${cliente.usuario}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Listagem de Clientes</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 90%; margin: auto; padding-top: 30px; }
+        table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+        th, td { padding: 8px 12px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Clientes Cadastrados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>E-mail</th>
+                    <th>Usuário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="cliente : ${clientes}">
+                    <td th:text="${cliente.nome}"></td>
+                    <td th:text="${cliente.sobrenome}"></td>
+                    <td th:text="${cliente.email}"></td>
+                    <td th:text="${cliente.usuario}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

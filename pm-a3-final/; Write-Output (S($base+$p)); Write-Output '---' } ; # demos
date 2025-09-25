@@ -1,0 +1,10 @@
+'}' de fechamento ausente no 
+bloco de instru‡Æo ou na 
+defini‡Æo de tipo.
+    + CategoryInfo          : 
+    ParserError: (:) [], Par  
+  entContainsErrorRecordExc   
+ eption
+    + FullyQualifiedErrorId : 
+    MissingEndCurlyBrace
+ 

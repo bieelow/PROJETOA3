@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+<head><meta charset="UTF-8"><title>Projetos</title></head>
+<body>
+  <h1>Projetos</h1>
+  <p>Lista e cadastro mínimo aparecerão aqui na Parte 2.</p>
+  <form action="/projects" method="post" th:object="${novo}">
+    <input type="text" th:field="*{titulo}" placeholder="Título do projeto" required>
+    <select th:field="*{status}">
+      <option>PLANEJADO</option>
+      <option>EM_ANDAMENTO</option>
+      <option>CONCLUIDO</option>
+      <option>CANCELADO</option>
+    </select>
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <ul>
+    <th:block th:each="p : ${projects}">
+      <li th:text="${p.titulo} + ' — ' + ${p.status}">Projeto</li>
+    </th:block>
+  </ul>
+
+  <p><a href="/">Voltar</a></p>
+  </body>
+  </html>

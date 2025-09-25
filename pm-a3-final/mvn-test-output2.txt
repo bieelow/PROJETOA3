@@ -1,0 +1,103 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.faculana:pm-a3-final:jar:0.0.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.springframework.boot:spring-boot-maven-plugin is missing. @ line 57, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ----------------------< com.faculana:pm-a3-final >----------------------
+[INFO] Building pm-a3-final 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ pm-a3-final ---
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ pm-a3-final ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 25 source files with javac [debug release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pm-a3-final ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ pm-a3-final ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 7 source files with javac [debug release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ pm-a3-final ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.faculana.pm.repository.ProjectRepositoryTest
+19:49:13.456 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.faculana.pm.repository.ProjectRepositoryTest]: ProjectRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:49:13.637 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.faculana.pm.Application for test class com.faculana.pm.repository.ProjectRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-09-22T19:49:14.308-03:00  INFO 10380 --- [           main] c.f.pm.repository.ProjectRepositoryTest  : Starting ProjectRepositoryTest using Java 21.0.8 with PID 10380 (started by Gabriel in C:\Users\Gabriel\OneDrive\Área de Trabalho\FACULDADE GABRIEL\Segundo semestre\PROGRAMAÇÃO DE SOLUÇÕES COMPUTACIONAIS\GestaoDeProjetos-main\pm-a3-final)
+2025-09-22T19:49:14.312-03:00  INFO 10380 --- [           main] c.f.pm.repository.ProjectRepositoryTest  : No active profile set, falling back to 1 default profile: "default"
+2025-09-22T19:49:14.949-03:00  INFO 10380 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-22T19:49:15.114-03:00  INFO 10380 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 4 JPA repository interfaces.
+2025-09-22T19:49:15.207-03:00  INFO 10380 --- [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2025-09-22T19:49:15.434-03:00  INFO 10380 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:a4d816f7-bef4-4596-86bf-efae83109e1b;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-09-22T19:49:15.900-03:00  INFO 10380 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-22T19:49:16.059-03:00  INFO 10380 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-09-22T19:49:16.127-03:00  INFO 10380 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-22T19:49:16.661-03:00  INFO 10380 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-22T19:49:17.964-03:00  INFO 10380 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists app_user cascade 
+Hibernate: drop table if exists project cascade 
+Hibernate: drop table if exists task cascade 
+Hibernate: drop table if exists team cascade 
+Hibernate: drop table if exists team_membros cascade 
+Hibernate: create table app_user (id bigint generated by default as identity, email varchar(255) unique, nome varchar(255) not null, primary key (id))
+Hibernate: create table project (id bigint generated by default as identity, time_id bigint, titulo varchar(255) not null, status enum ('CANCELADO','CONCLUIDO','EM_ANDAMENTO','PLANEJADO'), primary key (id))
+Hibernate: create table task (prioridade integer, criada_em timestamp(6), id bigint generated by default as identity, projeto_id bigint not null, descricao varchar(255), titulo varchar(255) not null, primary key (id))
+Hibernate: create table team (id bigint generated by default as identity, nome varchar(255) not null, primary key (id))
+Hibernate: create table team_membros (membros_id bigint not null, team_id bigint not null, primary key (membros_id, team_id))
+Hibernate: alter table if exists project add constraint FKdsqvvifkrw4kocc2o6g9mwdtj foreign key (time_id) references team
+Hibernate: alter table if exists task add constraint FKc8qxqlc9cfkru1hg911bi4tra foreign key (projeto_id) references project
+Hibernate: alter table if exists team_membros add constraint FKb9qvbotpqkuxmiwlrghoc29n7 foreign key (membros_id) references app_user
+Hibernate: alter table if exists team_membros add constraint FKae8oc0351sr1au0k9ynqwhtyi foreign key (team_id) references team
+2025-09-22T19:49:18.026-03:00  INFO 10380 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-22T19:49:18.523-03:00  INFO 10380 --- [           main] c.f.pm.repository.ProjectRepositoryTest  : Started ProjectRepositoryTest in 4.754 seconds (process running for 6.233)
+WARNING: A Java agent has been loaded dynamically (C:\Users\Gabriel\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+Hibernate: insert into project (status,time_id,titulo,id) values (?,?,?,default)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.068 s -- in com.faculana.pm.repository.ProjectRepositoryTest
+[INFO] Running com.faculana.pm.service.ProjectServiceTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.435 s -- in com.faculana.pm.service.ProjectServiceTest
+[INFO] Running com.faculana.pm.util.algoritmos.BuscaTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in com.faculana.pm.util.algoritmos.BuscaTest
+[INFO] Running com.faculana.pm.util.algoritmos.FilaTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in com.faculana.pm.util.algoritmos.FilaTest
+[INFO] Running com.faculana.pm.util.algoritmos.OrdenacaoTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in com.faculana.pm.util.algoritmos.OrdenacaoTest
+[INFO] Running com.faculana.pm.util.algoritmos.PilhaTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.faculana.pm.util.algoritmos.PilhaTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.467 s
+[INFO] Finished at: 2025-09-22T19:49:19-03:00
+[INFO] ------------------------------------------------------------------------
